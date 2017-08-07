@@ -6,7 +6,6 @@ jobs:
         - script: echo versionName=j1 > $JOB_STATE/my_state.env
         - script: echo foo=j1 >> $JOB_STATE/my_state.env
       - OUT: my_state
-        overwrite: false
 
   - name: J2
     type: runSh
