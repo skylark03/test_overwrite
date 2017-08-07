@@ -1,3 +1,9 @@
 resources:
   - name: my_state
     type: state
+  - name: my_params
+    type: params
+    version:
+      params:
+        foo: "bar"
+        fizz: "bin"
