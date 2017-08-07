@@ -34,4 +34,4 @@ jobs:
     steps:
       - IN: my_params
       - TASK:
-        - cat /build/IN/my_params/params/version.json
+        - script: cat /build/IN/my_params/params/version.json
