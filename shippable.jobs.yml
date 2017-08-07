@@ -18,3 +18,17 @@ jobs:
         - script: echo bar=j2 >> $JOB_STATE/my_state.env
       - OUT: my_state
         overwrite: true
+        
+  - name: J3
+    type: runSh
+    steps:
+      - TASK:
+        - script echo foo=j3 > $JOB_STATE/my_params.env
+      - OUT: my_params
+  
+  - name: J4
+    type: runSh
+    steps:
+      - IN: my_params
+      - TASK:
+        - cat /build/IN/my_params/params/version.json
