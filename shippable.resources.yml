@@ -1,9 +1,18 @@
 resources:
   - name: my_state
     type: state
+    
   - name: my_params
     type: params
     version:
       params:
         foo: "bar"
         fizz: "bin"
+
+  - name: test_exit_repo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: skylark03/test_exit
+      branch: master
+      buildOnPullRequest: true
