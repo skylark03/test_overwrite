@@ -3,6 +3,7 @@ jobs:
     type: runSh
     steps:
       - TASK:
+        - script: cat /build/OUT/my_state/version.json
         - script: echo versionName=j1 > $JOB_STATE/my_state.env
         - script: echo foo=j1 >> $JOB_STATE/my_state.env
       - OUT: my_state
@@ -12,6 +13,7 @@ jobs:
     type: runSh
     steps:
       - TASK:
+        - script: cat /build/OUT/my_state/version.json
         - script: echo versionName=j2 > $JOB_STATE/my_state.env
         - script: echo bar=j2 >> $JOB_STATE/my_state.env
       - OUT: my_state
