@@ -28,6 +28,7 @@ jobs:
         - script: echo "my_params job state"
         - script: cat $JOB_STATE/my_params.env
       - OUT: my_params
+        overwrite: true
   
   - name: J4
     type: runSh
