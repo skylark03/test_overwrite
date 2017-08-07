@@ -43,4 +43,4 @@ jobs:
       - IN: test_exit_repo
       - TASK:
         - script: echo "Do something with the repo..."
-      - OUT: text_exit_ciRepo
+      - OUT: test_exit_ciRepo
