@@ -44,3 +44,10 @@ jobs:
       - TASK:
         - script: echo "Do something with the repo..."
       - OUT: test_exit_ciRepo
+      
+  - name: J6
+    type: runSh
+    steps:
+      - IN: my_state
+      - TASK:
+        - script: cat /build/IN/my_state/version.json
