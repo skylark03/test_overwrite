@@ -1,0 +1,10 @@
+resources:
+  - name: my_state
+    type: state
+    
+  - name: test_state_repo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: skylark03/test_state
+      branch: master
