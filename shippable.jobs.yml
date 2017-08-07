@@ -17,3 +17,4 @@ jobs:
         - script: echo versionName=j2 > $JOB_STATE/my_state.env
         - script: echo bar=j2 >> $JOB_STATE/my_state.env
       - OUT: my_state
+        overwrite: true
