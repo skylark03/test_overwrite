@@ -36,3 +36,11 @@ jobs:
       - IN: my_params
       - TASK:
         - script: cat /build/IN/my_params/version.json
+
+  - name: J5
+    type: runSh
+    steps:
+      - IN: test_exit_repo
+      - TASK:
+        - script: echo "Do something with the repo..."
+      - OUT: text_exit_ciRepo
