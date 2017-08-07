@@ -24,7 +24,9 @@ jobs:
     steps:
       - TASK:
         - script echo foo=j3 > $JOB_STATE/my_params.env
-        - script echo versionName=j3-$(date) > $JOB_STATE/my_params.env
+        - script echo versionName="j3-$(date)" >> $JOB_STATE/my_params.env
+        - echo "my_params job state"
+        - cat $JOB_STATE/my_params.env
       - OUT: my_params
   
   - name: J4
